@@ -27,7 +27,7 @@ public class ModEventhandler {
 			List<String> mods = new ArrayList<String>();
 			for (ModContainer c : Loader.instance().getActiveModList()) mods.add(c.getModId());
 
-			SocketThread thread = new SocketThread("", 0, name, id, "", mods);
+			SocketThread thread = new SocketThread("lolnet.co.nz", ConfigHandler.port, name, id, ConfigHandler.packName, mods);
 			thread.start();
 		}
 	}
