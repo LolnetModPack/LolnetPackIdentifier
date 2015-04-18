@@ -16,10 +16,11 @@ import java.util.UUID;
  */
 public class ModEventhandler {
 
+	private SocketThread thread = null;
+
 	@SubscribeEvent
 	public void guiEvent(GuiScreenEvent.InitGuiEvent event)
 	{
-
 		if (event.gui instanceof GuiMultiplayer)
 		{
 			String name =  Minecraft.getMinecraft().getSession().func_148256_e().getName();
@@ -27,8 +28,11 @@ public class ModEventhandler {
 			List<String> mods = new ArrayList<String>();
 			for (ModContainer c : Loader.instance().getActiveModList()) mods.add(c.getModId());
 
-			SocketThread thread = new SocketThread("lolnet.co.nz", ConfigHandler.port, name, id, ConfigHandler.packName, mods);
-			thread.start();
+			if (thread == null || thread.isFinished())
+			{
+				thread = new SocketThread("lolnet.co.nz", ConfigHandler.port, name, id, ConfigHandler.packName, mods);
+				thread.start();
+			}
 		}
 	}
 
@@ -40,6 +44,7 @@ public class ModEventhandler {
 		private UUID playerUUID;
 		private String modpackName;
 		private List<String> modlist;
+		public boolean finished = false;
 
 		public SocketThread(String ip, int port, String playername, UUID playerUUID, String modpackName, List<String> modlist)
 		{
@@ -54,6 +59,11 @@ public class ModEventhandler {
 		@Override
 		public void run() {
 			SocketMessage.sendMessage(ip, port, playername, playerUUID, modpackName, modlist);
+			finished = true;
+		}
+
+		public boolean isFinished() {
+			return finished;
 		}
 	}
 

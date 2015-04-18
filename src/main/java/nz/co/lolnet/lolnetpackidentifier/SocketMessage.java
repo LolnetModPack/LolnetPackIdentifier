@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 public class SocketMessage {
 
 	public static void sendMessage(String ip, int port,String playerName,UUID playerUUID,String modPackName,List<String> modlist) {
+		System.out.println("Send Message");
 		Socket clientSocket = null;
 		PrintWriter out = null;
 		try {
@@ -25,12 +26,12 @@ public class SocketMessage {
 			Logger.getLogger(SocketMessage.class.getName()).log(Level.SEVERE, null, ex);
 		} finally {
 			try {
-				out.close();
-				clientSocket.close();
+				if (out != null) out.close();
+				if (clientSocket != null) clientSocket.close();
 			} catch (IOException ex) {
 				Logger.getLogger(SocketMessage.class.getName()).log(Level.SEVERE, null, ex);
 			}
 		}
-
+		System.out.println("Message Sent");
 	}
 }
