@@ -51,7 +51,7 @@ public class SocketMessage {
 
 		if (thread == null || thread.isFinished())
 		{
-			thread = new SocketThread("lolnet.co.nz", ConfigHandler.port, name, id, ConfigHandler.packName, mods);
+			thread = new SocketThread(LolnetPackIdentifier.LOLNET_IP, ConfigHandler.port, name, id, ConfigHandler.packName, mods);
 			thread.start();
 		}
 	}
