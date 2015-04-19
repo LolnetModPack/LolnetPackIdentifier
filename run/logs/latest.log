@@ -1,10 +1,99 @@
-[11:17:04] [main/INFO]: Setting user: Player252
-[11:17:05] [Client thread/INFO]: LWJGL Version: 2.9.1
-[11:17:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Lolnet Pack Identifier
-[11:17:11] [Sound Library Loader/INFO]: Sound engine started
-[11:17:12] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[11:17:12] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[11:17:12] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Lolnet Pack Identifier
-[11:17:12] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[11:17:13] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[11:17:14] [Sound Library Loader/INFO]: Sound engine started
+[16:29:32] [main/INFO]: Setting user: Player224
+[16:29:34] [Client thread/INFO]: LWJGL Version: 2.9.1
+[16:29:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Lolnet Pack Identifier
+[16:29:40] [Sound Library Loader/INFO]: Sound engine started
+[16:29:42] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[16:29:42] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[16:29:42] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Lolnet Pack Identifier
+[16:29:42] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[16:29:43] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[16:29:44] [Sound Library Loader/INFO]: Sound engine started
+[16:31:19] [Client thread/INFO]: Connecting to s, 25565
+[16:31:21] [Server Connector #1/ERROR]: Couldn't connect to server
+java.net.UnknownHostException: s
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.7.0_75]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098) ~[?:1.7.0_75]
+	at java.net.InetAddress.getByName(InetAddress.java:1048) ~[?:1.7.0_75]
+	at net.minecraft.client.multiplayer.GuiConnecting$1.run(GuiConnecting.java:69) [GuiConnecting$1.class:?]
+[16:32:52] [Client thread/INFO]: Connecting to s, 25565
+[16:32:55] [Server Connector #2/ERROR]: Couldn't connect to server
+java.net.UnknownHostException: s
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.7.0_75]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098) ~[?:1.7.0_75]
+	at java.net.InetAddress.getByName(InetAddress.java:1048) ~[?:1.7.0_75]
+	at net.minecraft.client.multiplayer.GuiConnecting$1.run(GuiConnecting.java:69) [GuiConnecting$1.class:?]
+[16:33:23] [Client thread/INFO]: Connecting to s, 25565
+[16:33:26] [Server Connector #3/ERROR]: Couldn't connect to server
+java.net.UnknownHostException: s
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.7.0_75]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098) ~[?:1.7.0_75]
+	at java.net.InetAddress.getByName(InetAddress.java:1048) ~[?:1.7.0_75]
+	at net.minecraft.client.multiplayer.GuiConnecting$1.run(GuiConnecting.java:69) [GuiConnecting$1.class:?]
+[16:33:49] [Client thread/INFO]: Connecting to s, 25565
+[16:33:52] [Server Connector #4/ERROR]: Couldn't connect to server
+java.net.UnknownHostException: s
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.7.0_75]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098) ~[?:1.7.0_75]
+	at java.net.InetAddress.getByName(InetAddress.java:1048) ~[?:1.7.0_75]
+	at net.minecraft.client.multiplayer.GuiConnecting$1.run(GuiConnecting.java:69) [GuiConnecting$1.class:?]
+[16:34:16] [Client thread/INFO]: Connecting to s, 25565
+[16:34:18] [Server Connector #5/ERROR]: Couldn't connect to server
+java.net.UnknownHostException: s
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.7.0_75]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098) ~[?:1.7.0_75]
+	at java.net.InetAddress.getByName(InetAddress.java:1048) ~[?:1.7.0_75]
+	at net.minecraft.client.multiplayer.GuiConnecting$1.run(GuiConnecting.java:69) [GuiConnecting$1.class:?]
+[16:34:31] [Client thread/INFO]: Connecting to s, 25565
+[16:34:34] [Server Connector #6/ERROR]: Couldn't connect to server
+java.net.UnknownHostException: s
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.7.0_75]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098) ~[?:1.7.0_75]
+	at java.net.InetAddress.getByName(InetAddress.java:1048) ~[?:1.7.0_75]
+	at net.minecraft.client.multiplayer.GuiConnecting$1.run(GuiConnecting.java:69) [GuiConnecting$1.class:?]
+[16:37:11] [Client thread/INFO]: Connecting to s, 25565
+[16:37:13] [Server Connector #7/ERROR]: Couldn't connect to server
+java.net.UnknownHostException: s
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.7.0_75]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098) ~[?:1.7.0_75]
+	at java.net.InetAddress.getByName(InetAddress.java:1048) ~[?:1.7.0_75]
+	at net.minecraft.client.multiplayer.GuiConnecting$1.run(GuiConnecting.java:69) [GuiConnecting$1.class:?]
+[16:37:43] [Client thread/INFO]: Connecting to s, 25565
+[16:37:46] [Server Connector #8/ERROR]: Couldn't connect to server
+java.net.UnknownHostException: s
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.7.0_75]
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162) ~[?:1.7.0_75]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098) ~[?:1.7.0_75]
+	at java.net.InetAddress.getByName(InetAddress.java:1048) ~[?:1.7.0_75]
+	at net.minecraft.client.multiplayer.GuiConnecting$1.run(GuiConnecting.java:69) [GuiConnecting$1.class:?]
+[16:37:57] [Client thread/INFO]: Connecting to lolnet.co.nz, 25565

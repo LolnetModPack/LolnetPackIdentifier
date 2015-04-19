@@ -1,71 +1,59 @@
 package nz.co.lolnet.lolnetpackidentifier;
 
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiMultiplayer;
+import cpw.mods.fml.relauncher.ReflectionHelper;
+import net.minecraft.client.gui.*;
+import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.client.event.GuiScreenEvent;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.lang.reflect.Field;
 
 /**
  * Created by Brandon on 4/18/2015.
  */
 public class ModEventhandler {
 
-	private SocketThread thread = null;
-
 	@SubscribeEvent
-	public void guiEvent(GuiScreenEvent.InitGuiEvent event)
+	public void guiOpen(GuiOpenEvent event)
 	{
 		if (event.gui instanceof GuiMultiplayer)
 		{
-			String name =  Minecraft.getMinecraft().getSession().func_148256_e().getName();
-			UUID id = Minecraft.getMinecraft().getSession().func_148256_e().getId();
-			List<String> mods = new ArrayList<String>();
-			for (ModContainer c : Loader.instance().getActiveModList()) mods.add(c.getModId());
+			GuiMultiplayer gui = (GuiMultiplayer) event.gui;
 
-			if (thread == null || thread.isFinished())
+			try
 			{
-				thread = new SocketThread("lolnet.co.nz", ConfigHandler.port, name, id, ConfigHandler.packName, mods);
-				thread.start();
+				Field parentGui = ReflectionHelper.findField(GuiMultiplayer.class, "field_146798_g");
+				parentGui.setAccessible(true);
+
+				Object parent = parentGui.get(gui);
+				event.gui = new GuiMPCustom((GuiScreen)parent);
+			}
+			catch (IllegalAccessException e)
+			{
+				e.printStackTrace();
 			}
 		}
 	}
 
-	private static class SocketThread extends Thread
+	@SubscribeEvent
+	public void guiEvent2(GuiScreenEvent.ActionPerformedEvent event)
 	{
-		private String ip;
-		private int port;
-		private String playername;
-		private UUID playerUUID;
-		private String modpackName;
-		private List<String> modlist;
-		public boolean finished = false;
-
-		public SocketThread(String ip, int port, String playername, UUID playerUUID, String modpackName, List<String> modlist)
+		if (event.gui instanceof GuiScreenServerList && event.button.id == 0)
 		{
-			this.ip = ip;
-			this.port = port;
-			this.playername = playername;
-			this.playerUUID = playerUUID;
-			this.modpackName = modpackName;
-			this.modlist = modlist;
-		}
+			try
+			{
+				Field selectionList = ReflectionHelper.findField(GuiScreenServerList.class, "field_146302_g");
+				selectionList.setAccessible(true);
 
-		@Override
-		public void run() {
-			SocketMessage.sendMessage(ip, port, playername, playerUUID, modpackName, modlist);
-			finished = true;
-		}
+				GuiTextField selection = (GuiTextField)selectionList.get(event.gui);
 
-		public boolean isFinished() {
-			return finished;
+				if (selection.getText().equals("lolnet.co.nz")) SocketMessage.sendMessage();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
 		}
 	}
-
 
 }
