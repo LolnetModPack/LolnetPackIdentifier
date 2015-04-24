@@ -1,10 +1,13 @@
-[17:06:55] [main/INFO]: Setting user: Player559
-[17:06:56] [Client thread/INFO]: LWJGL Version: 2.9.1
-[17:07:00] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Lolnet Pack Identifier
-[17:07:01] [Sound Library Loader/INFO]: Sound engine started
-[17:07:03] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[17:07:03] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[17:07:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Lolnet Pack Identifier
-[17:07:03] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[17:07:03] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[17:07:04] [Sound Library Loader/INFO]: Sound engine started
+[02:25:46] [main/INFO]: Logging in with username & password
+[02:25:56] [main/INFO]: Setting user: brandon3055
+[02:25:57] [Client thread/INFO]: LWJGL Version: 2.9.1
+[02:26:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Lolnet Pack Identifier
+[02:26:03] [Sound Library Loader/INFO]: Sound engine started
+[02:26:04] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[02:26:05] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[02:26:05] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Lolnet Pack Identifier
+[02:26:05] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[02:26:05] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[02:26:06] [Sound Library Loader/INFO]: Sound engine started
+[02:26:14] [Client thread/INFO]: Connecting to lolnet.co.nz, 25565
+[02:26:16] [Client thread/INFO]: Stopping!

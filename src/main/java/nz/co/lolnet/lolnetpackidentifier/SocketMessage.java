@@ -42,8 +42,6 @@ public class SocketMessage {
 
 	public static void sendMessage()
 	{
-		System.out.println("send");
-
 		String name =  Minecraft.getMinecraft().getSession().func_148256_e().getName();
 		UUID id = Minecraft.getMinecraft().getSession().func_148256_e().getId();
 		List<String> mods = new ArrayList<String>();

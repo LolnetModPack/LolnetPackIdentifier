@@ -2,9 +2,9 @@ package nz.co.lolnet.lolnetpackidentifier;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.ReflectionHelper;
-import net.minecraft.client.gui.*;
+import net.minecraft.client.gui.GuiMultiplayer;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.client.event.GuiOpenEvent;
-import net.minecraftforge.client.event.GuiScreenEvent;
 
 import java.lang.reflect.Field;
 
@@ -34,30 +34,4 @@ public class ModEventhandler {
 			}
 		}
 	}
-
-	@SubscribeEvent
-	public void guiEvent2(GuiScreenEvent.ActionPerformedEvent event)
-	{
-		if (event.gui instanceof GuiScreenServerList && event.button.id == 0)
-		{
-			try
-			{
-				Field selectionList = ReflectionHelper.findField(GuiScreenServerList.class, "field_146302_g");
-				selectionList.setAccessible(true);
-
-				GuiTextField selection = (GuiTextField)selectionList.get(event.gui);
-
-
-				String ip = selection.getText();
-				
-				if (ip.toLowerCase().contains(LolnetPackIdentifier.LOLNET_IP)) SocketMessage.sendMessage();
-
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-	}
-
 }
