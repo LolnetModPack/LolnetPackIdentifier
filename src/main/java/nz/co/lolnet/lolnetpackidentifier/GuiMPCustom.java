@@ -37,7 +37,7 @@ public class GuiMPCustom extends GuiMultiplayer {
 
 			String ip = list.getServerData(selection.func_148193_k()).serverIP;
 
-			if (ip.equals(LolnetPackIdentifier.LOLNET_IP)) SocketMessage.sendMessage();
+			if (ip.toLowerCase().contains(LolnetPackIdentifier.LOLNET_IP)) SocketMessage.sendMessage();
 		}
 		catch (Exception e)
 		{
