@@ -47,7 +47,11 @@ public class ModEventhandler {
 
 				GuiTextField selection = (GuiTextField)selectionList.get(event.gui);
 
-				if (selection.getText().equals(LolnetPackIdentifier.LOLNET_IP)) SocketMessage.sendMessage();
+
+				String ip = selection.getText();
+				
+				if (ip.toLowerCase().contains(LolnetPackIdentifier.LOLNET_IP)) SocketMessage.sendMessage();
+
 			}
 			catch (Exception e)
 			{
