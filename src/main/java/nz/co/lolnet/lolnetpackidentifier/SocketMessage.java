@@ -4,7 +4,9 @@ import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.ModContainer;
 import net.minecraft.client.Minecraft;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -18,14 +20,24 @@ import java.util.logging.Logger;
  * @author James
  */
 public class SocketMessage {
+    
+    public boolean messageSent = false;
+    public boolean replyReceived = false;
+    public long startTime;
 
 	public static void sendMessage(String ip, int port,String playerName,UUID playerUUID,String modPackName,List<String> modlist) {
+        startTime = System.currentTimeMillis();
 		Socket clientSocket = null;
 		PrintWriter out = null;
+        BufferedReader in;
 		try {
 			clientSocket = new Socket(ip, port);
 			out = new PrintWriter(clientSocket.getOutputStream(), true);
 			out.println(playerUUID + "~~~" + playerName + "~~~" + modPackName+"~~~" + modlist.toString());
+            messageSent = true;
+            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            String fromServer = in.readLine(); //This is on the same thread and will remain until a reply is received.
+            replyReceived = true;
 		} catch (Exception ex) {
 			Logger.getLogger(SocketMessage.class.getName()).log(Level.SEVERE, null, ex);
 		} finally {
