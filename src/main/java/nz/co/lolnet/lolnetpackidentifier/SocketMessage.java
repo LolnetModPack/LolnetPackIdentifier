@@ -21,9 +21,9 @@ import java.util.logging.Logger;
  */
 public class SocketMessage {
     
-    public boolean messageSent = false;
-    public boolean replyReceived = false;
-    public long startTime;
+    public static boolean messageSent = false;
+    public static boolean replyReceived = false;
+    public static long startTime;
 
 	public static void sendMessage(String ip, int port,String playerName,UUID playerUUID,String modPackName,List<String> modlist) {
         startTime = System.currentTimeMillis();
